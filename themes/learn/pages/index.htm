@@ -1,0 +1,17 @@
+title = "Главная страница"
+url = "/"
+layout = "frontpage"
+is_hidden = 0
+
+[builderList]
+modelClass = "Impressionbureau\Movies\Models\Movie"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "opisanie-filma"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+{% component 'builderList' %}

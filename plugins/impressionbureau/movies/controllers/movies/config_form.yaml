@@ -1,0 +1,10 @@
+name: Фильмы
+modelClass: Impressionbureau\Movies\Models\Movie
+form: $/impressionbureau/movies/models/movie/fields.yaml
+defaultRedirect: impressionbureau/movies/movies
+create:
+    redirect: 'impressionbureau/movies/movies/update/:id'
+    redirectClose: impressionbureau/movies/movies
+update:
+    redirect: impressionbureau/movies/movies
+    redirectClose: impressionbureau/movies/movies

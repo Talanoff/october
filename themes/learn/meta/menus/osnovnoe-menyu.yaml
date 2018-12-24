@@ -1,0 +1,11 @@
+name: 'Основное меню'
+items:
+    -
+        title: 'Все меню'
+        type: all-static-pages
+        code: menu
+        replace: '1'
+        viewBag:
+            isHidden: '0'
+            cssClass: nav
+            isExternal: '0'

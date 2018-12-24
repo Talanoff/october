@@ -1,0 +1,10 @@
+name: Actors
+form: $/impressionbureau/movies/models/actor/fields.yaml
+modelClass: Impressionbureau\Movies\Models\Actor
+defaultRedirect: impressionbureau/movies/actors
+create:
+    redirect: 'impressionbureau/movies/actors/update/:id'
+    redirectClose: impressionbureau/movies/actors
+update:
+    redirect: impressionbureau/movies/actors
+    redirectClose: impressionbureau/movies/actors

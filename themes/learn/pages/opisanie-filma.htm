@@ -1,0 +1,52 @@
+title = "Описание фильма"
+url = "/movies/:slug"
+layout = "page"
+is_hidden = 0
+
+[builderDetails movie]
+modelClass = "Impressionbureau\Movies\Models\Movie"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = movie.record %}
+
+{% if record %}
+    {% if record.poster %}
+        <p><img src="{{ record.poster.path }}" alt=""></p>
+    {% endif %}
+    <h1>{{ record.title }}</h1>
+    {{ record.description|raw }}
+    
+    {% if record.previews %}
+    <ul class="inline">
+        {% for image in record.previews %}
+        <li><img src="{{ image.path }}" alt=""></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+{% if record.genres %}
+    <hr>
+    {% for genre in record.genres %}
+    {{genre.title}}{{loop.last ? '.' : ','}}
+    {% endfor %}
+{% endif %}
+
+{% if record.actors %}
+    <hr>
+    <ul class="list-unstyled">
+    {% for actor in record.actors %}
+        <li>
+            <a href="{{ ['actors', actor.slug]|join('/')|app }}">
+                {{ actor.name }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

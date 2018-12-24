@@ -1,0 +1,20 @@
+plugin:
+    name: 'impressionbureau.movies::lang.plugin.name'
+    description: 'impressionbureau.movies::lang.plugin.description'
+    author: ImpressionBureau
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    movies-menu-item:
+        label: Фильмы
+        url: impressionbureau/movies/movies
+        icon: icon-video-camera
+        sideMenu:
+            side-menu-item:
+                label: Жанры
+                url: impressionbureau/movies/genres
+                icon: icon-umbrella
+            actors:
+                label: Актеры
+                url: impressionbureau/movies/actors
+                icon: icon-user

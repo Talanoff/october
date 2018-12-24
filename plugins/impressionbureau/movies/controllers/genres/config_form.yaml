@@ -1,0 +1,10 @@
+name: Genres
+form: $/impressionbureau/movies/models/genre/fields.yaml
+modelClass: Impressionbureau\Movies\Models\Genre
+defaultRedirect: impressionbureau/movies/genres
+create:
+    redirect: 'impressionbureau/movies/genres/update/:id'
+    redirectClose: impressionbureau/movies/genres
+update:
+    redirect: impressionbureau/movies/genres
+    redirectClose: impressionbureau/movies/genres

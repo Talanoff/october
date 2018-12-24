@@ -1,0 +1,18 @@
+1544606216a:1:{s:13:"frontpage.htm";a:6:{s:8:"fileName";s:13:"frontpage.htm";s:7:"content";s:147:"==
+{% partial 'site/header' %}
+
+<section>
+    <div class="container">
+        {% page %}
+    </div>
+</section>
+
+{% partial 'site/footer' %}";s:5:"mtime";i:1543394140;s:6:"markup";s:144:"{% partial 'site/header' %}
+
+<section>
+    <div class="container">
+        {% page %}
+    </div>
+</section>
+
+{% partial 'site/footer' %}";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}
